@@ -1,0 +1,1 @@
+SELECT  trip2.trip_id,departure_at,arrival_at,route_name,vehicle_capacity,reservation.seats, reservation.seats * trip2.seat_price AS Sold_Seats, reservation.seats * trip2.seat_price / trip2.vehicle_capacity * 100 AS Occupancy FROM trip2 INNER JOIN reservation ON trip2.trip_id = reservation.trip_id
